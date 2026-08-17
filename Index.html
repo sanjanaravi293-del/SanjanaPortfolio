@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sanjana R | Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            background: #020617;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* HOME */
+
+        #home {
+            min-height: 90vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 30px;
+
+            background: linear-gradient(
+                135deg,
+                #0f172a,
+                #172554
+            );
+        }
+
+        #home h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        #home h1 span {
+            color: #38bdf8;
+        }
+
+        #home h3 {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            max-width: 700px;
+            margin: auto;
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 28px;
+
+            background: #38bdf8;
+            color: #020617;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            border-radius: 30px;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+
+        /* COMMON SECTION */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .title {
+            text-align: center;
+            color: #38bdf8;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+
+        /* ABOUT */
+
+        .about-box {
+            max-width: 850px;
+            margin: auto;
+
+            background: #1e293b;
+            padding: 30px;
+
+            border-radius: 15px;
+            text-align: center;
+
+            border: 1px solid #334155;
+        }
+
+        .about-box p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+
+        /* EDUCATION */
+
+        .education-container {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .education-card {
+            background: #1e293b;
+            padding: 25px;
+
+            border-radius: 15px;
+            border: 1px solid #334155;
+
+            text-align: center;
+        }
+
+        .education-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .education-card p {
+            color: #cbd5e1;
+        }
+
+
+        /* EXPERIENCE */
+
+        .experience-box {
+            max-width: 850px;
+            margin: auto;
+
+            background: #1e293b;
+            padding: 30px;
+
+            border-radius: 15px;
+            border-left: 5px solid #38bdf8;
+        }
+
+        .experience-box h3 {
+            color: #38bdf8;
+        }
+
+        .experience-box h4 {
+            margin: 8px 0;
+        }
+
+        .experience-box p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            padding: 12px 22px;
+
+            background: #1e293b;
+            border: 1px solid #334155;
+
+            border-radius: 25px;
+            color: #e2e8f0;
+        }
+
+        .skill:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+
+        /* PROJECT */
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .project-card {
+            max-width: 700px;
+
+            background: #1e293b;
+            padding: 30px;
+
+            border-radius: 15px;
+            border: 1px solid #334155;
+
+            text-align: center;
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+
+        /* CERTIFICATIONS */
+
+        .certifications {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .certifications div {
+            background: #1e293b;
+
+            padding: 18px;
+            margin: 12px 0;
+
+            border-radius: 10px;
+            border-left: 4px solid #38bdf8;
+
+            color: #cbd5e1;
+        }
+
+
+        /* LANGUAGES */
+
+        .languages {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .language {
+            background: #1e293b;
+            padding: 15px 30px;
+
+            border-radius: 25px;
+            border: 1px solid #334155;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 15px;
+            color: #cbd5e1;
+        }
+
+        .contact a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color: #94a3b8;
+        }
+
+
+        /* MOBILE */
+
+        @media(max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 13px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #home h1 {
+                font-size: 40px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <h2>Sanjana R</h2>
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- HOME -->
+
+    <section id="home">
+
+        <div>
+
+            <h1>
+                Hi, I'm <span>Sanjana R</span>
+            </h1>
+
+            <h3>
+                B.Sc Computer Science | Python | Data Science
+            </h3>
+
+            <p>
+
+                To start my career in a progressive organization
+                where I can learn, grow, and contribute to the
+                success of the organization.
+
+            </p>
+
+            <a href="#about" class="btn">
+                Explore My Portfolio
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2 class="title">
+            About Me
+        </h2>
+
+        <div class="about-box">
+
+            <p>
+
+                I am Sanjana R, a B.Sc Computer Science graduate
+                from Nadar Saraswathi College of Arts and Science,
+                Theni.
+
+                I am interested in technology, programming,
+                Data Science and Machine Learning.
+
+                I have completed a Data Science using Python
+                internship where I worked with Exploratory Data
+                Analysis, basic machine learning models and
+                data visualization.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <h2 class="title">
+            Education
+        </h2>
+
+        <div class="education-container">
+
+
+            <div class="education-card">
+
+                <h3>
+                    B.Sc Computer Science
+                </h3>
+
+                <p>
+                    Nadar Saraswathi College Of Arts And Science
+                </p>
+
+                <p>
+                    Theni
+                </p>
+
+                <p>
+                    CGPA: 7.0 / 10
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>
+                    HSC
+                </h3>
+
+                <p>
+                    Z.K.M. Hr. Sec. School
+                </p>
+
+                <p>
+                    Bodinayakanur
+                </p>
+
+                <p>
+                    57.83%
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>
+                    SSLC
+                </h3>
+
+                <p>
+                    Z.K.M. Hr. Sec. School
+                </p>
+
+                <p>
+                    Bodinayakanur
+                </p>
+
+                <p>
+                    Pass
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+
+        <h2 class="title">
+            Experience
+        </h2>
+
+        <div class="experience-box">
+
+            <h3>
+                Data Science using Python Intern
+            </h3>
+
+            <h4>
+                Nitroware Technologies Pvt. Ltd., Coimbatore
+            </h4>
+
+            <p>
+
+                Conducted Exploratory Data Analysis (EDA)
+                to identify key patterns and trends.
+
+                Built basic machine learning models and
+                visualized insights using charts and graphs.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2 class="title">
+            Skills
+        </h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                Python
+            </div>
+
+            <div class="skill">
+                HTML & CSS
+            </div>
+
+            <div class="skill">
+                Time Management
+            </div>
+
+            <div class="skill">
+                Adaptability
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PROJECT -->
+
+    <section id="projects">
+
+        <h2 class="title">
+            Projects
+        </h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+
+                <h3>
+                    Interview Chatbot using Machine Learning
+                </h3>
+
+                <p>
+
+                    Developed a machine learning based
+                    virtual interview chatbot for automated
+                    candidate evaluation.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CERTIFICATIONS -->
+
+    <section id="certifications">
+
+        <h2 class="title">
+            Certifications & Activities
+        </h2>
+
+        <div class="certifications">
+
+            <div>
+                Certificate Course (A Grade),
+                Placement & VAC Cell – 2023–2024
+            </div>
+
+            <div>
+                ICASET 2023 – International Conference
+                (December 2023)
+            </div>
+
+            <div>
+                ICCIAP 2024 – International Conference
+                (December 2024)
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LANGUAGES -->
+
+    <section>
+
+        <h2 class="title">
+            Languages
+        </h2>
+
+        <div class="languages">
+
+            <div class="language">
+                Tamil
+            </div>
+
+            <div class="language">
+                English
+            </div>
+
+            <div class="language">
+                Kannada
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2 class="title">
+            Contact Me
+        </h2>
+
+        <div class="contact">
+
+            <p>
+                📍 Theni, Tamil Nadu
+            </p>
+
+            <p>
+                📞
+                <a href="tel:7867838157">
+                    7867838157
+                </a>
+            </p>
+
+            <p>
+                📧
+                <a href="mailto:sanjanaravi293@gmail.com">
+                    sanjanaravi293@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Sanjana R | Personal Portfolio
+        </p>
+
+    </footer>
+
+
+</body>
+
+  </html>
